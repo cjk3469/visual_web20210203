@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+      text-align: center;
+    }
+
+    section {
+      width: 50%;
+      margin: 50px auto;
+      background-color: brown;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    span, h1, h3 {
+      color: white;
+    }
+
+     img {
+       z-index: 100;
+       will-change: opacity;/* will-change옵션을 주고 투명도가 바뀔것을 암시하니까 브라우저가 이미지 레이어를 분리   */
+     } 
+
+  </style>
+</head>
+<body>
+  <section>
+    <img src="images/5.gif">
+    <h1>헤드라인</h1>
+    <h3>h3태그는 블록요소 입니다.</h3>
+  </section>
+  <span>Hello DOM</span>
+</body>
+</html>

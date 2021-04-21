@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .outter{
+            width: 500px;
+            height: 500px;
+            background-color: greenyellow;
+        }
+        .middle{
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            background-color: lightsalmon;
+            transform: translateY(50%);
+        }
+        
+        button{
+            position: relative;
+            top:50%;
+            left:50px;
+            transform: translate(50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class = 'outter'>
+        <div class = 'middle'>
+            <button>Clike Me</button>
+        </div>
+        
+    </div>
+    <script>
+        const outter = document.querySelector('.outter');
+        const middle = document.querySelector('.middle');
+        const button = document.querySelector('button');
+        
+        
+        outter.addEventListener('click',(event)=>{
+            //의미있는 타겟과 현재 타겟이 다르면 처리하지 않는다
+            if(evet.target !== event.currentTarget){
+                return;
+            }
+            console.log(`outter : ${event.currentTarget},${event.target}`);
+        })
+        middle.addEventListener('click',(event)=>{
+            if(evet.target !== event.currentTarget){
+                return;
+            }
+            console.log(`middle : ${event.currentTarget},${event.target}`);
+        })
+        button.addEventListener('click',(event)=>{
+            console.log(`button : ${event.currentTarget},${event.target}`);
+            //event.stopPropagation();
+        })
+        button.addEventListener('click',(event)=>{
+            console.log(`button2 : ${event.currentTarget},${event.target}`);
+        })
+    </script>
+</body>
+</html>

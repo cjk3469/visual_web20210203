@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    div {
+      width: 250px;
+      height: 250px;
+      background-color: blanchedalmond;
+      margin-bottom: 4px;
+      border-radius: 8px;
+    }
+
+    .special {
+      background-color: lightsalmon;
+    }
+  </style>
+</head>
+<body>
+  
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+  <div>13</div>
+  <div>14</div>
+  <div>15</div>
+  <div>16</div>
+  <div class="special">17</div>
+  <script>
+    const special = document.querySelector('.special');//object-element
+    special.addEventListener('click', (event) => {
+      //console.log('click==>'+event);
+      const rect = special.getBoundingClientRect();
+      console.log(rect);
+      console.log(`client: ${event.clientX}, ${event.clientY}`);
+      console.log(`page: ${event.pageX}, ${event.pageY}`);
+    });
+  </script>  
+  <div>18</div>
+  <div>19</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window load 테스트</title>
+  <script src="_defer.js" defer></script>
+  <script>
+    // 전역변수
+    // 함수 선언
+
+  </script>
+</head>
+<body>
+  <script>//함수선언-hoisting:head에 선언한 것과 동일한 효과가 일어남, 변수선언-지변성격
+    // only document html만 완료되면 즉시 처리됨.
+    window.addEventListener('DOMContentLoaded', (event) => {
+      console.log('DOM fully loaded and parsed');
+    });    
+    // after resources (css, images) - 모든 리소스가 모두 다 다운되면
+    window.addEventListener('load',() => {
+        console.log('load');
+    });
+    // 브라우저가 페이지를 내리기 전에 해야 할게 있을 때
+    // 확인하는 방법은 페이지 새로고침을 다다다다 눌러본다.
+    window.addEventListener('beforeunload',() => {
+      console.log('beforeunload');
+    });
+    // resource is being unloaded - 이것은 내 눈으로 확인 불가함.
+    window.addEventListener('unload',() => {
+      console.log('unload');
+    });
+
+  </script>
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+  <script>//함수선언, 변수선언</script>
+</body>
+</html>
