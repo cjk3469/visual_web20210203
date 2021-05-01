@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/f_icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/5c1817e2fb.js" crossorigin="anonymous"></script>
+    <title>FileTransferSystem</title>
+</head>
+<body id="main">
+    <div id="header">
+        <div class="inner">
+            <div class="topArea">
+                <h1 class="logo">
+                    <a href="index.html">HOME</a>
+                </h1>
+            </div>
+            <div class="download">
+                <i class="fas fa-download"></i>
+                <a href="fileTransfer.exe">Download</a>
+            </div>
+            <div id="category" class="side">
+                <div class="position">
+                    <ul>
+                        <li>
+                            <a href="pagemain.html">주제선정</a>
+                        </li>
+                        <li>
+                            <a href="flowchart.html">플로우차트</a>
+                        </li>
+                        <li>
+                            <a href="trouble.html">트러블슈팅</a>
+                        </li>
+                        <li>
+                            <a href="program.html">기술시현</a>
+                        </li>
+                        <li>
+                            <a href="after.html">후기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="container">
+            <div class="trouble">
+                <h4>인스턴스화 주체 클래스의 위치에 따른 주소번지 관리 문제</h4>
+                <p>
+                    실제 뷰클래스를 참조하고 조작하는 클래스는 ClientThread클래스인데 </br>해당 뷰클래스의 인스턴스화를 로그인뷰에서 해버리니까
+                    주소번지를 가져오기 위해선 </br>
+                    생성자를 이용하거나 static에 올려서 사용해야하는 불편함이 발생함.
+                </p>
+            </div>
+        </br>
+        <div class="trouble">
+                <h4>기능 추가에 따른 버그 해결 문제</h4>
+                <p>
+                    최초 계획했던 기능까지 구현 후 업데이트 방식을 적용하기로 하였으나 
+                    </br>기능을 추가함에 따라 자잘한 버그가 발생함.
+                    </br>ex) 아이디, 비밀번호 입력시 공백이 입력될 경우 에러발생 등 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
